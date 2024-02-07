@@ -2,11 +2,6 @@ This model was trained by using faces of 7159 Human face images and 4828 Wild Ca
 The model was created and trained by using create-model.py and train-model.py
 The application can be launched from main.py
 
-FOLDERS:
-dataset contains training dataset
-test-set_preprocessed contains test_set used for validation during the trains
-YOUR_IMAGES contains the images you want to test the AI with
-
 INFERENCES ABOUT THE AI:
 The program seems to be working for Humans, Tigers and Wolves appropriate. But it can not detect male lions with long hair, and female lions with the beard
 
