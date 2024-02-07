@@ -1,0 +1,4 @@
+Epoch 1/2
+11987/11987 [==============================] - 161s 13ms/step - loss: 0.1723 - accuracy: 0.9338 - val_loss: 0.1749 - val_accuracy: 0.9583
+Epoch 2/2
+11987/11987 [==============================] - 83s 7ms/step - loss: 0.0795 - accuracy: 0.9719 - val_loss: 0.0389 - val_accuracy: 0.9833
