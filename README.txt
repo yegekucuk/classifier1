@@ -1,4 +1,4 @@
-This model was trained by using faces of 7159 Human face images and 4828 Wild Cat face images. It classifys the face as Human or Wild Cat.
+This model was trained by using faces of 7159 Human face images and 4828 Wild Cat face images. It classifies the face as Human or Wild Cat.
 The model was created and trained by using create-model.py and train-model.py
 The application can be launched from main.py
 
