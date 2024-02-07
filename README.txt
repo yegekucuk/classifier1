@@ -4,17 +4,16 @@ The application can be launched from main.py
 
 INFERENCES ABOUT THE AI:
 The program seems to be working for Humans, Tigers and Wolves appropriate. But it can not detect male lions with long hair, and female lions with the beard
-
-TRAINED:
-Humans: 5/5
-Lions: 3/5
-Tigers: 2/2
-Wolves: 4/4
-Total: 14/16 (87.5%)
-
-NOT TRAINED:
-Cats: 3/3
-Dogs: 0/3
+  TRAINED:
+  Humans: 5/5
+  Lions: 3/5
+  Tigers: 2/2
+  Wolves: 4/4
+  Total: 14/16 (87.5%)
+  
+  NOT TRAINED:
+  Cats: 3/3
+  Dogs: 0/3
 
 
 USAGE:
