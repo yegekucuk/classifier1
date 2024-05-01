@@ -23,8 +23,3 @@ Enter full name of the image (img.png) and see if it works!
 !WARNING!
 PLEASE PUT YOUR IMAGES ONLY IN "YOUR_IMAGES" FOLDER
 PLEASE USE ONLY FACES OF THE HUMANS/ANIMALS, FROM THE FRONT VIEW!
-
-
-
-
-Test!
