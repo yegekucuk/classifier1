@@ -2,3 +2,4 @@ results/
 dataset/
 testset/
 __pycache__/
+model_untrained.h5
