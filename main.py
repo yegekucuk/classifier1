@@ -3,6 +3,8 @@ from tkinter import filedialog
 from tkinter import messagebox
 from PIL import Image, ImageTk
 
+import keras_classifier1
+
 # -- PARAMS --
 image_size = (300,300)
 
@@ -13,6 +15,7 @@ def upload_image():
         messagebox.showinfo("Selected File", file_path)
         show(f"Selected File: {file_path}")
         display_image(file_path, img_canvas1)
+        img = keras_classifier1.load_image(file_path)
     else:
         messagebox.showwarning("No File Selected", "Please select an image file.")
 
@@ -81,7 +84,7 @@ title2 = tk.Label(vBox2, text="Title 2", font=("Helvetica", 12))
 title2.pack()
 
 # Image container 2 using Canvas
-img_canvas2 = tk.Canvas(vBox2, width=image_size[1], height=image_size[0], bg='white')
+img_canvas2 = tk.Label(vBox2, text="Human", width=image_size[1], height=image_size[0], bg='white', font=("Helvetica", 24))
 img_canvas2.pack(pady=5)
 
 # Run the application

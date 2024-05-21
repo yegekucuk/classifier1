@@ -1,9 +1,7 @@
 from keras.preprocessing.image import image_utils
 import numpy as np
 
-image_uploaded : image_utils
-
-def load_image_on_keras_utils(file_path):
+def load_image(file_path):
     # Getting name of input image
     img_name = input("Please enter the full name of the image: ")
 
