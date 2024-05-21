@@ -21,10 +21,12 @@ def upload_image():
         display_image(file_path, img_canvas1)
         img = keras_classifier1.load_image(file_path)
         pred = model.predict(img)
-        if pred[0][0] == 1:
-            show("Human")
-        elif pred[0][0] == 0:
-            show("Wild Cat or Wolf")
+        textPrompt = f"{pred[0][0]} "
+        if int(round(pred[0][0])) == 1:
+            textPrompt += "Human face"
+        elif int(round(pred[0][0])) == 0:
+            textPrompt += "Wild Cat | Wolf | Fox face"
+        show(textPrompt)
 
     else:
         messagebox.showwarning("No File Selected", "Please select an image file.")
@@ -63,11 +65,7 @@ upload_button = tk.Button(root, text="Upload Image", command=upload_image, font=
 upload_button.pack(pady=1)
 
 # vBox for image
-vBox1 = tk.Frame(root)
-vBox1.pack(pady=10)
-title1 = tk.Label(vBox1, text="Image", font=("Helvetica", 12))
-title1.pack()
-img_canvas1 = tk.Canvas(vBox1, width=image_size[1], height=image_size[0], bg='white')
+img_canvas1 = tk.Canvas(root, width=image_size[1], height=image_size[0], bg='white')
 img_canvas1.pack(pady=5)
 
 # Add a read-only text area below the image
