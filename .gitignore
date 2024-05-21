@@ -1,3 +1,4 @@
-dataset
-YOUR_IMAGES
-model_trained.h5
+dataset/
+testset/
+results/
+__pycache__/
