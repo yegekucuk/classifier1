@@ -2,4 +2,5 @@ results/
 dataset/
 testset/
 __pycache__/
+create-test-set/
 model_untrained.h5

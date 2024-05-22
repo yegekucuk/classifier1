@@ -3,8 +3,8 @@ from keras.models import Sequential, load_model
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
 # Create an instance of ImageDataGenerator for training and testing
-train_gen = ImageDataGenerator(rescale=1./255)
-test_gen = ImageDataGenerator(rescale=1./255)
+train_gen = ImageDataGenerator(rescale=1./255, shear_range= 0.2, zoom_range= 0.2, horizontal_flip=True)
+test_gen = ImageDataGenerator(rescale=1./255, shear_range= 0.2, zoom_range= 0.2, horizontal_flip=True)
 
 # Load training data
 train_set = train_gen.flow_from_directory(
@@ -34,7 +34,7 @@ model = load_model("model_untrained.h5")
 model.fit(
     train_set,
     steps_per_epoch=steps_per_epoch,
-    epochs=10,
+    epochs=7,
     validation_data=test_set,
     validation_steps=validation_steps
 )
