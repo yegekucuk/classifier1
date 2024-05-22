@@ -25,7 +25,7 @@ def upload_image():
         if int(round(pred[0][0])) == 1:
             textPrompt += "Human face"
         elif int(round(pred[0][0])) == 0:
-            textPrompt += "Wild Cat | Wolf | Fox face"
+            textPrompt += "Wild Animal"
         show(textPrompt)
 
     else:
@@ -55,7 +55,7 @@ root.geometry("800x600")
 root.resizable(False,False)
 
 # Add labels for Human/Wild Cat Classifier and CNN Model
-classifier_label = tk.Label(root, text="Human/Wild Cat Classifier", font=("Helvetica", 18))
+classifier_label = tk.Label(root, text="Human Wild Animal Classifier", font=("Helvetica", 18))
 classifier_label.pack(pady=1)
 cnn_label = tk.Label(root, text="CNN Model", font=("Helvetica", 14))
 cnn_label.pack(pady=(1, 40))
