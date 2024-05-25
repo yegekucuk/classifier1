@@ -1,6 +1,8 @@
+__pycache__/
 results/
 dataset/
 testset/
-__pycache__/
+test/
 create-test-set/
+Presentation.pptx
 model_untrained.h5
