@@ -14,7 +14,12 @@ model = load_model("model_trained.h5")
 
 # -- FUNCS --
 def upload_image():
-    file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg;*.jpeg;*.png;*.gif")])
+    file_path = filedialog.askopenfilename(
+    filetypes=[
+        ("Image Files", "*.jpg *.jpeg *.png"),
+    ]
+)
+
     if file_path:
         #messagebox.showinfo("Selected File", file_path)
         #show(f"Selected File: {file_path}")
