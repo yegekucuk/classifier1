@@ -1,5 +1,5 @@
 #from keras.preprocessing.image import image_utils
-from tensorflow.keras import utils
+from keras import utils
 import numpy as np
 
 def load_image(file_path):

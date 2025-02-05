@@ -16,11 +16,9 @@ This repository contains a Keras CNN model in Python that distinguish between Hu
 
 ## Installation
 ### Requirements
-- Git
 - Python
 - Keras
 - Tensorflow
-- Tkinter
 - Numpy
 - PIL
 
@@ -42,7 +40,7 @@ cd classifier1
 and then you run main.py file:
 ```sh
 # Run
-python main.py
+python3 main.py
 ```
 When you run the file, you need to click "Upload button" to upload your image and test the program! <br> <br>
 <img src="https://github.com/yegekucuk/classifier1/assets/99672103/efe8110f-f009-4a82-90f9-6662d9de4161" width="500">

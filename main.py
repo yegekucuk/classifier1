@@ -3,14 +3,13 @@ from tkinter import filedialog
 from tkinter import messagebox
 from PIL import Image, ImageTk
 
-import keras_classifier1
-from keras.models import load_model, Sequential
-
+import image
+from keras import models
 
 # -- PARAMS --
 image_size = (300,300)
-model : Sequential
-model = load_model("model_trained.h5")
+model : models.Sequential
+model = models.load_model("model_trained.h5")
 
 # -- FUNCS --
 def upload_image():
@@ -24,7 +23,7 @@ def upload_image():
         #messagebox.showinfo("Selected File", file_path)
         #show(f"Selected File: {file_path}")
         display_image(file_path, img_canvas1)
-        img = keras_classifier1.load_image(file_path)
+        img = image.load_image(file_path)
         pred = model.predict(img)
         textPrompt = f"{pred[0][0]} "
         if int(round(pred[0][0])) == 1:
