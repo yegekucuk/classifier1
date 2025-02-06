@@ -1,0 +1,5 @@
+django
+keras
+numpy
+tensorflow
+pillow

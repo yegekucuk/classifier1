@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: classifier-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: classifier-app
+  template:
+    metadata:
+      labels:
+        app: classifier-app
+    spec:
+      containers:
+      - name: classifier-container
+        image: yegekucuk2/classifier:latest
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: classifier-service
+spec:
+  selector:
+    app: classifier-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: ClusterIP
