@@ -19,7 +19,7 @@ jobs:
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "yegekucuk2" --password-stdin
     
     - name: Build the Docker image
-      run: docker build . --file /web/Dockerfile --tag yegekucuk2/classifier:${{ github.run_number }}
+      run: docker build . --file ./web/Dockerfile --tag yegekucuk2/classifier:${{ github.run_number }}
     
     - name: Tag the Docker image as latest
       run: docker tag yegekucuk2/classifier:${{ github.run_number }} yegekucuk2/classifier:latest
