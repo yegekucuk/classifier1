@@ -30,12 +30,12 @@ def make_prediction(request):
 
         # Make predictions
         pred = model.predict(img)
-        textPrompt:str
+        textPrompt = f"{pred[0][0]:.4f} - "
         if int(round(pred[0][0])) == 1:
             textPrompt = "Human face"
         else:
-            textPrompt = "Wild animal"
-        textPrompt = textPrompt + f" (Pred: {pred[0][0]:.3f})"
+            textPrompt = "Wild Animal"
+
         # Delete the temp file
         os.remove(temp_file.name)
 
