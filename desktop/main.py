@@ -8,7 +8,7 @@ from PIL import Image, ImageTk
 
 
 # -- PARAMS --
-image_size = (300,300)
+image_size_last = (300,300)
 model : models.Sequential
 model = models.load_model("model.keras")
 
@@ -53,7 +53,7 @@ def show(text):
 
 def display_image(file_path, canvas):
     img = Image.open(file_path)
-    img = img.resize(image_size, Image.Resampling.LANCZOS)  # Resize the image to fit the container
+    img = img.resize(image_size_last, Image.Resampling.LANCZOS)  # Resize the image to fit the container
     img_tk = ImageTk.PhotoImage(img)
     
     canvas.create_image(0, 0, anchor=tk.NW, image=img_tk)
@@ -79,7 +79,7 @@ upload_button = tk.Button(root, text="Upload Image", command=upload_image, font=
 upload_button.pack(pady=1)
 
 # vBox for image
-img_canvas1 = tk.Canvas(root, width=image_size[1], height=image_size[0], bg='white')
+img_canvas1 = tk.Canvas(root, width=image_size_last[1], height=image_size_last[0], bg='white')
 img_canvas1.pack(pady=5)
 
 # Add a read-only text area below the image
